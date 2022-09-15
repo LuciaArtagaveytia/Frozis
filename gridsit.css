@@ -1,0 +1,84 @@
+@import url('"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"');
+
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size: 1rem;
+	min-height: 100%; 
+}
+
+
+.grid_container{
+	display: grid;
+	gap: 5px;
+	grid-template: 
+	"header" 100px
+	"navbar" 50px
+	"main"	auto
+	"footer" 40px
+	;
+}
+
+
+.header{
+	grid-area: header;
+	background-color: violet;
+}
+
+
+.navbar{
+	grid-area: navbar;
+	background-color: skyblue;
+}
+
+.main{
+	grid-area: main;
+	background-color: blueviolet;
+}
+
+.footer{
+	grid-area: footer;
+	background-color: saddlebrown;
+}
+
+	
+
+@media (min-width: 768px) {
+
+	.grid_container{
+
+		grid-template: 
+		"header 	navbar" 	100px 
+		"main 	    main" 		auto
+		"footer 	footer" 	60px /
+		 280px 		auto;
+ 	}
+
+}
+
+@media (min-width: 992px) {
+	.grid_container{
+		grid-template: 
+		"header 	header 	navbar" 	100px 
+		"main   	main 	main" 	    auto
+		"footer 	footer 	footer" 	60px /
+		 280px 		auto 	900px;
+	}
+}
+
+
+
+
+
+
